@@ -1,0 +1,90 @@
+body {
+    background-image: url("background_decoration.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: auto;
+    padding: 3rem;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow-y: auto;
+}
+
+#titre {
+    padding: 1rem;
+    color: azure;
+    text-align: center;
+    border: solid;
+    background-color: #0b0214a2;
+    border-radius: 20px;
+
+}
+
+#conteneur_cartes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 15px;
+    padding: 2rem;
+}
+
+.carte {
+    padding: 0.5rem;
+    text-align: center;
+    min-height: 300px;
+    color: aliceblue;
+    background-color: #020814;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    border-radius: 15px;
+   
+
+}
+
+.carte img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border: solid;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 1rem; 
+    }
+
+    #conteneur_cartes {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .carte img {
+        width: 125px;
+        height: 125px;
+      
+    }
+    .carte {
+        padding: 0.3rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 1rem; 
+    }
+
+    #conteneur_cartes {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+    .carte img {
+        width: 80px;
+        height: 80px;
+      
+    }
+    .carte {
+        padding: 0.3rem;
+    }
+}
